@@ -1,0 +1,29 @@
+.settlements .vat-content{max-width:1540px}.settlements .vat-header nav{align-items:center;flex-wrap:wrap}.settlements .vat-cards{grid-template-columns:repeat(4,minmax(0,1fr))}.settlements .vat-cards article{padding:19px 20px}.settlements .vat-cards strong{font-size:clamp(22px,2.1vw,33px)}.settlement-cards strong button{font:inherit;white-space:nowrap}.settlement-cards article>div{min-height:39px;font-size:14px;color:inherit}.settlement-cards .vat-result>div{color:white}.settlement-cards progress{width:100%;height:12px;accent-color:#ffdc26;margin:7px 0 12px;border:0;border-radius:8px;overflow:hidden}.settlement-cards progress::-webkit-progress-bar{background:#eef0f2}.settlement-cards progress::-webkit-progress-value{background:#ffdc26}.settlement-percent{color:#2a8b50}.debt-period{display:flex;align-items:center;gap:8px;padding:12px;background:white;border:1px solid #dce1e5;border-radius:10px;min-height:44px}.settlement-note{display:flex;align-items:start;gap:8px;color:#687580;font-size:13px;line-height:1.5;margin:0 0 18px}.settlement-note svg{flex-shrink:0;margin-top:2px}.settlement-table-actions{display:flex;align-items:center;gap:12px}.settlement-search{display:flex;align-items:center;gap:9px;border:1px solid #dce1e5;border-radius:9px;padding:9px 12px;color:#687580}.settlement-search input{border:0;outline:0;background:transparent;font:inherit;width:225px}.settlements .vat-table td{font-variant-numeric:tabular-nums}.settlements .vat-table th{font-weight:600}.settlements .vat-table .vat-row-label small{display:block;margin:4px 0 0;font-weight:400}.settlements .vat-row-label{text-align:left}.settlements .vat-table th:first-child{min-width:250px}.settlements .vat-amount{color:inherit;text-decoration-color:#9babb77a}.settlements .settlement-document{background:#f8f9fb}.settlements .settlement-document th{padding-left:40px;font-size:12px;font-weight:400}.settlements .settlement-document small{display:block;color:#78838d;margin-top:4px}.settlements .vat-footer>span:first-child{display:flex;align-items:center;gap:5px}@media(max-width:1050px){.settlements .vat-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.settlements .vat-header{flex-wrap:wrap}}@media(max-width:600px){.settlements .vat-cards{grid-template-columns:1fr}.settlements .vat-panel-title{align-items:start;flex-direction:column}.settlement-table-actions{width:100%;flex-wrap:wrap}.settlement-search{flex:1;min-width:0}.settlement-search input{width:100%;min-width:0}.settlements .vat-details .vat-panel-title{flex-direction:row}.settlements .vat-header nav a{font-size:12px;padding:8px}.settlements .vat-filters .debt-period{width:100%}}
+
+.supplier-advance-cards{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:20px}
+
+/* Compact summary for laptop screens; scroll the report with its headings visible. */
+.settlements .settlement-cards{grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.settlements .settlement-cards article{padding:14px 12px;min-width:0}
+.settlements .settlement-cards article>div{font-size:12px;line-height:1.35;min-height:36px;gap:5px}
+.settlements .settlement-cards strong{font-size:clamp(18px,1.65vw,26px);letter-spacing:-.6px;margin:10px 0 7px}
+.settlements .settlement-cards span:not(.metric-help){font-size:11px}
+.supplier-report>.vat-table-wrap{max-height:65vh;overflow:auto;isolation:isolate}
+.supplier-report .vat-table{border-collapse:separate;border-spacing:0}
+.supplier-report .vat-table thead th{position:sticky;top:0;z-index:2;background:#f7f8fa;box-shadow:0 1px 0 #dce1e5}
+@media(max-width:1099px){.settlements .settlement-cards{grid-template-columns:repeat(3,minmax(0,1fr))}.settlements .settlement-cards strong{font-size:23px}}
+@media(max-width:600px){.settlements .settlement-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.settlements .settlement-cards strong{font-size:20px}}
+@media(max-width:360px){.settlements .settlement-cards{grid-template-columns:1fr}}
+/* Fit all eight columns on laptop screens without horizontal scrolling. */
+@media(min-width:1100px){
+ .supplier-report .vat-table{table-layout:fixed}
+ .supplier-report .vat-table th:first-child{width:20%;min-width:0}
+ .supplier-report .vat-table th,.supplier-report .vat-table td{padding:9px 7px;font-size:12px}
+ .supplier-report .vat-table thead th{white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+ .supplier-report .vat-table tbody th{white-space:normal;overflow-wrap:anywhere}
+ .supplier-report .vat-row-label{width:100%;min-width:0}
+ .supplier-report .vat-row-label>svg{flex-shrink:0}
+ .supplier-report .vat-row-label>span{min-width:0}
+ .supplier-report .settlement-document th{padding-left:22px}
+ .supplier-report .vat-table .vat-amount{font-size:clamp(10px,.9vw,13px);white-space:nowrap}
+}

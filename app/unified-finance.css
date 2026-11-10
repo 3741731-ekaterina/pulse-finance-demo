@@ -1,0 +1,70 @@
+/* Shared Finance overview; existing report tables retain their own markup. */
+.page-finance .cards{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}
+.page-finance .finance-details-bar{display:flex;align-items:center;gap:18px;margin:0 0 18px;flex-wrap:wrap}
+.page-finance .details-toggle{min-height:44px;padding:10px 20px;font-size:15px;font-weight:700;border-radius:9px;box-shadow:0 4px 12px #f8d32020}
+.page-finance .scope-chip{background:white;border:1px solid #e8e9ec;border-radius:8px;padding:8px 12px;font-size:12px;color:#52606c}
+.page-finance #tax-overview-cards.unified-details{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:start;margin:0 0 24px}
+.page-finance #tax-overview-cards.unified-details>.tax-cards{display:contents}
+.page-finance #tax-overview-cards.unified-details .tax-card{width:100%;min-width:0;margin:0;padding:17px 16px;min-height:145px;align-self:stretch;text-align:left;flex:none;box-shadow:0 6px 20px #26302807;border:1px solid #eeeef0;border-radius:12px}
+.page-finance #tax-overview-cards.unified-details .metric-symbol{display:none}
+.page-finance #tax-overview-cards.unified-details .metric-heading{font-size:13px;line-height:1.4;min-height:36px;font-weight:400}
+.page-finance #tax-overview-cards.unified-details .tax-card strong{font-size:clamp(21px,1.9vw,29px);line-height:1.2;margin:9px 0;white-space:normal}
+.page-finance #tax-overview-cards.unified-details .tax-card small{font-size:12px;line-height:1.5;color:#798599}
+.page-finance #tax-overview-cards.unified-details .card-vat{margin-top:9px;padding-top:9px;border-color:#eef0f3}
+.page-finance #tax-overview-cards.unified-details .expense-value,.page-finance #tax-overview-cards.unified-details .paid-tax-card strong,.page-finance #tax-overview-cards.unified-details .without-vat-card strong{color:#c60016}
+.page-finance #tax-overview-cards.unified-details .featured-vat{grid-column:span 2;background:linear-gradient(125deg,#192633,#293440)}
+.page-finance #tax-overview-cards.unified-details .featured-vat strong{color:#ffda24}
+.page-finance #tax-overview-cards.unified-details .featured-vat small{color:#dce2e9}
+.page-finance .finance-report-nav{background:white;border:1px solid #ebecef;border-bottom:0;border-radius:14px 14px 0 0;padding:12px 16px;display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:0}
+.page-finance .finance-report-nav .view-switch{background:none;border:0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
+.page-finance .finance-report-nav .view-switch button{border:1px solid #e7e9ec;border-radius:22px;padding:9px 16px;font-size:13px;background:white;color:#253343}
+.page-finance .finance-report-nav .view-switch button[aria-pressed=true]{color:#ffe14a;background:linear-gradient(130deg,#1b262f,#2b3841);border-color:#25323c;box-shadow:0 3px 8px #16232a12}
+.page-finance .money-report,.page-finance .tax-screen>.report{border-top-left-radius:0;border-top-right-radius:0;margin-top:0}
+.page-finance .tax-screen{margin-bottom:0}
+.page-finance .tax-table-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}
+.page-finance .tax-table-actions h2{font-size:19px}
+.page-finance .tax-tabs:empty{display:none}
+.page-finance .tax-tabs{padding:0 16px 12px;background:white;border:0}
+.page-finance .tax-tabs button{padding:6px 12px;font-size:12px}
+.page-finance .change-toggle{display:flex;gap:10px;align-items:center;cursor:pointer;margin-left:auto;font-size:12px}
+.page-finance .change-toggle input{appearance:none;width:42px;height:24px;border-radius:30px;background:#d6dce0;position:relative;cursor:pointer;transition:background .15s;flex:none}
+.page-finance .change-toggle input:after{content:'';position:absolute;width:18px;height:18px;top:3px;left:3px;border-radius:50%;background:white;box-shadow:0 1px 3px #0002;transition:transform .15s}
+.page-finance .change-toggle input:checked{background:#ffd400}.page-finance .change-toggle input:checked:after{transform:translateX(18px)}
+.page-finance .change-toggle input:focus-visible{outline:3px solid #9b7f00;outline-offset:3px}
+.page-finance .change-toggle b{display:block;font-weight:500}.page-finance .change-toggle small{display:block;color:#85909b;font-size:10px;margin-top:2px}
+.page-finance .lower{margin-top:20px}
+.date-range{position:relative;z-index:30}
+.range-popover{position:absolute;top:calc(100% + 8px);left:0;width:680px;max-width:calc(100vw - 48px);padding:18px;background:#fff;border:1px solid #e3e6e9;border-radius:15px;box-shadow:0 18px 45px #1d2c3826;z-index:100}
+.range-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:15px}
+.range-title button,.range-month-heading button{border:0;background:transparent;display:grid;place-items:center;padding:5px;cursor:pointer;color:#26323f}
+.range-inputs{display:grid;grid-template-columns:1fr 1fr;gap:18px}.range-inputs label{display:flex;align-items:center;gap:10px;font-size:13px}.range-inputs input{width:100%;min-width:0;border:1px solid #dce0e5;border-radius:7px;padding:8px 10px;font-size:14px;background:white}
+.range-months{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:18px}.range-month+.range-month{border-left:1px solid #eef0f2;padding-left:24px}
+.range-month-heading{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:10px;font-size:14px;text-transform:capitalize}.range-month-heading button{margin-right:auto}.range-month-heading strong{margin-right:auto}
+.range-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px 0;text-align:center}
+.range-grid .weekday{font-size:11px;color:#85909e;padding:8px 0}
+.range-grid button{width:100%;height:33px;border:0;background:transparent;border-radius:0;font-size:13px;color:#22313d;cursor:pointer}
+.range-grid button.outside{color:#a0a8b2}.range-grid button:disabled{color:#ccd0d5;cursor:default}.range-grid button.in-range{background:#fff8d8}.range-grid button.range-edge{background:#ffda23;border-radius:50%;font-weight:700;color:#18232b}.range-grid button:not(:disabled):hover{background:#ffec8a;border-radius:6px}
+.range-hint{font-size:11px;color:#7b8693;margin:10px 0}
+.range-actions{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.range-actions>button{padding:8px 9px;border:1px solid #e7e9ee;border-radius:7px;background:#f6f7f9;font-size:11px;cursor:pointer}.range-actions>button.primary{margin-left:auto;background:linear-gradient(120deg,#ffd900,#ffe555);font-weight:700;font-size:12px}.range-actions>button:disabled{opacity:.4;cursor:default}
+@media(max-width:1100px){.page-finance #tax-overview-cards.unified-details{grid-template-columns:repeat(4,minmax(0,1fr))}.page-finance .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.range-popover{position:fixed;left:14px;top:110px;max-height:calc(100dvh - 130px);overflow:auto;width:calc(100vw - 28px);max-width:none}.range-months{gap:12px}.range-month+.range-month{padding-left:10px}.range-month-heading{font-size:12px;gap:4px}.range-grid button{height:30px;font-size:12px}.range-inputs{gap:10px}.range-inputs label{display:block}.range-inputs input{font-size:12px}.page-finance #tax-overview-cards.unified-details{grid-template-columns:repeat(2,minmax(0,1fr))}.page-finance .finance-report-nav{padding:10px}.page-finance .change-toggle{margin-left:0}.page-finance .finance-report-nav .view-switch button{font-size:12px;padding:8px 11px}.page-finance .details-toggle{font-size:13px}.page-finance .scope-chip{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.page-finance .change-toggle input,.page-finance .change-toggle input:after{transition:none}}
+.page-finance #tax-overview-cards.unified-details .featured-vat{grid-column:span var(--vat-span,2)}
+@media(max-width:1100px){.page-finance #tax-overview-cards.unified-details .featured-vat{grid-column:span var(--vat-span-four,2)}}
+@media(max-width:700px){.page-finance #tax-overview-cards.unified-details .featured-vat{grid-column:span var(--vat-span-two,2)}}
+
+.company-multiselect label{display:flex;align-items:center;gap:10px;padding:10px 6px;cursor:pointer}.company-multiselect input{width:18px;height:18px;accent-color:#d4a900}.company-multiselect small{display:block;max-width:300px;color:#737b83;padding:8px 6px}
+
+.metric-help{display:inline-flex!important;align-items:center;justify-content:center;width:20px;height:20px;border:1px solid currentColor;border-radius:50%;font-size:12px;font-weight:700;margin-top:8px;cursor:help;opacity:.75}.metric-help:focus-visible{outline:2px solid #e4b800;outline-offset:3px}.metric-help-dialog{max-width:440px;width:calc(100vw - 40px);border:1px solid #ddd;border-radius:16px;padding:24px;color:#1b252c;background:white}.metric-help-dialog::backdrop{background:#17212a55}.metric-help-dialog p{line-height:1.6}.expense-reconciliation{margin:12px 0 20px;padding:14px 18px;background:#fff;border:1px solid #e5e2dc;border-radius:12px;font-size:13px}.expense-reconciliation summary{cursor:pointer;font-weight:600}.expense-reconciliation dl{display:grid;grid-template-columns:1fr auto;gap:10px}.expense-reconciliation dd{margin:0;font-variant-numeric:tabular-nums;text-align:right}.expense-reconciliation p{color:#636b70}
+
+.page-finance .cards .overview-vat{grid-column:2;font-size:12px;line-height:1.4;color:#68747b;margin-top:4px;font-weight:400}
+
+/* Separate payment VAT screen: preserve the existing card and report contents. */
+.page-vat-payments #tax-overview-cards.unified-details{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+.page-vat-payments #tax-overview-cards.unified-details .tax-card{min-height:205px;padding:20px}
+.page-vat-payments #tax-overview-cards.unified-details .featured-vat{grid-column:span var(--vat-span-four,1)}
+.vat-payment-note{font-size:13px;color:#68747b;line-height:1.5;margin:0 0 14px}
+@media(max-width:900px){.page-vat-payments #tax-overview-cards.unified-details{grid-template-columns:repeat(2,minmax(0,1fr))}.page-vat-payments #tax-overview-cards.unified-details .featured-vat{grid-column:span var(--vat-span-two,1)}}
+@media(max-width:480px){.page-vat-payments #tax-overview-cards.unified-details{grid-template-columns:1fr}.page-vat-payments #tax-overview-cards.unified-details .featured-vat{grid-column:span 1}}
+
+.internal-payment-section{margin:20px 0;padding:20px;background:#fff;border:1px solid #e5e8eb;border-radius:14px}.internal-payment-section h2{font-size:19px}.internal-payment-section p{color:#68747b;font-size:13px;line-height:1.5}.internal-payment-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}.internal-payment-cards .tax-card{width:100%;text-align:left}.internal-payment-cards strong{display:block;margin:12px 0;font-size:26px}@media(max-width:600px){.internal-payment-cards{grid-template-columns:1fr}}
